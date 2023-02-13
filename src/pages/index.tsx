@@ -9,8 +9,8 @@ export default function Home() {
         <title>ansher.dev</title>
       </Head>
       <Layout>
+        <SpaceScene />
         <WelcomeSection />
-        {/* <div className="h-screen" /> */}
       </Layout>
     </>
   );
