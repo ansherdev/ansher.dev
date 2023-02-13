@@ -10,7 +10,7 @@ export const WelcomeSection = () => {
         alt="Jet Board"
         fill
       />
-    </div> */}
+      </div> */}
         {/* <Terminal /> */}
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { Layout } from 'components/layout';
-import { WelcomeSection } from 'components/welcome-section';
+import { SpaceScene, WelcomeSection } from 'components/welcome-section';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
       </Head>
       <Layout>
         <WelcomeSection />
+        {/* <div className="h-screen" /> */}
       </Layout>
     </>
   );
