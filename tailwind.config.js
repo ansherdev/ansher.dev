@@ -9,10 +9,14 @@ module.exports = {
         'ar-xiketic': '#0D0C1D',
         'ar-oxford-blue': '#161B33',
         'ar-purple-navy': '#474973',
-        'ar-hookers-green': '#52796F',
-        'ar-dark-slate-gary': '#354F52',
-        'ar-command-green': '#8EBF99',
-        'ar-command-green-shadow': '#84A98C',
+        'dracula-violet': '#bd93f9',
+        'dracula-blue': '#8be9fd',
+        'dracula-green': '#50fa7b',
+        'dracula-beige': '#f8f8f2',
+        'dracula-red': '#ff5555',
+        'osx-red': '#ff5c5c',
+        'osx-yellow': '#ffbd4c',
+        'osx-green': '#00ca56',
       },
       keyframes: {
         'hand-shake': {
