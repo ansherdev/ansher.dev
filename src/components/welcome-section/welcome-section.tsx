@@ -11,7 +11,13 @@ export const WelcomeSection = () => {
         </span>
       </h1>
       <div className="flex items-center justify-center">
-        <div></div>
+        <Image
+          className="image-rendering-pixelated animate-fly"
+          src="/jet-board.gif"
+          alt="jet-board"
+          width={512}
+          height={512}
+        />
         <Terminal />
       </div>
     </section>
