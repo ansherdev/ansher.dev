@@ -1,0 +1,11 @@
+import { Inter, JetBrains_Mono } from '@next/font/google';
+
+export const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-inter',
+});
+
+export const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-jet-brains',
+});

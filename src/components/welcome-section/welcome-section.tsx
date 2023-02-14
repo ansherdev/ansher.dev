@@ -12,7 +12,7 @@ export const WelcomeSection = () => {
       </h1>
       <div className="flex items-center justify-center">
         <div></div>
-        {/* <Terminal /> */}
+        <Terminal />
       </div>
     </section>
   );

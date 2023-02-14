@@ -20,7 +20,6 @@ export const SpaceScene = () => {
       >
         <ambientLight intensity={0.2} color="#bbbbbb" />
         <directionalLight color="#fbfbd3" position={[-2.5, 7.5, 5]} />
-        <fog color="violet" near={7} far={15} />
         <Moon />
         <Earth />
       </Canvas>

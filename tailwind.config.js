@@ -23,7 +23,8 @@ module.exports = {
         'hand-shake': 'hand-shake 3s ease-in-out infinite',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
+        inter: ['var(--font-inter)', ...fontFamily.sans],
+        'jet-brains': ['var(--font-jet-brains)', ...fontFamily.sans],
       },
     },
   },
