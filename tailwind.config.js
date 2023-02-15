@@ -51,9 +51,6 @@ module.exports = {
         inter: ['var(--font-inter)', ...fontFamily.sans],
         'jet-brains': ['var(--font-jet-brains)', ...fontFamily.sans],
       },
-      dropShadow: {
-        terminal: '0 0 2rem #ffffff20',
-      },
     },
   },
   plugins: [],

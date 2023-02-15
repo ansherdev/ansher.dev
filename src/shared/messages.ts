@@ -1,6 +1,6 @@
 import { Commands } from 'types/commands';
 
 export const messages: Record<Commands, string> = {
-  welcome: '',
-  help: '',
+  welcome: 'welcome',
+  help: 'help',
 };
