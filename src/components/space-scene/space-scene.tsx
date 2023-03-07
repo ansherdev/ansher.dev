@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei';
+import { Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Earth } from './earth';
 import { Moon } from './moon';
@@ -6,7 +6,7 @@ import { Moon } from './moon';
 export const SpaceScene = () => {
   return (
     <div
-      id="canvas-container"
+      id="space-scene-container"
       className="absolute top-0 left-0 h-screen w-screen"
     >
       <Canvas
@@ -23,6 +23,7 @@ export const SpaceScene = () => {
         <directionalLight color="#fbfbd3" position={[-2.5, 7.5, 5]} />
         <Moon />
         <Earth />
+        {/* <Stars /> */}
       </Canvas>
     </div>
   );

@@ -1,5 +1,5 @@
-import { Layout } from 'components/layout';
-import { SpaceScene, WelcomeSection } from 'components/welcome-section';
+import { SkillsSection } from 'components/skills-section';
+import { WelcomeSection } from 'components/welcome-section';
 import Head from 'next/head';
 
 export default function Home() {
@@ -8,10 +8,10 @@ export default function Home() {
       <Head>
         <title>ansher.dev</title>
       </Head>
-      <Layout>
-        <SpaceScene />
-        <WelcomeSection />
-      </Layout>
+
+      {/* <SpaceScene /> */}
+      <WelcomeSection />
+      <SkillsSection />
     </>
   );
 }
