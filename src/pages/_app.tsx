@@ -5,7 +5,7 @@ import 'styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
-      className={`${inter.variable} ${jetBrainsMono.variable} pl-32 pr-32 font-inter text-white`}
+      className={`${inter.variable} ${jetBrainsMono.variable} px-6 font-inter text-white xl:px-32`}
     >
       <Component {...pageProps} />
     </main>

@@ -23,7 +23,6 @@ export const SpaceScene = () => {
         <directionalLight color="#fbfbd3" position={[-2.5, 7.5, 5]} />
         <Moon />
         <Earth />
-        {/* <Stars /> */}
       </Canvas>
     </div>
   );

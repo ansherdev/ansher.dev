@@ -7,9 +7,9 @@ export const HelpMessage = () => {
       <span className="text-dracula-orange">Available Commands</span>
       <ul className="list-inside list-disc">
         {(Object.keys(COMMANDS_DESCRIPTION) as Command[]).map(
-          (command: Command, index) => {
+          (command: Command) => {
             return (
-              <li key={index}>
+              <li key={command}>
                 <span className="text-dracula-blue">{command}</span> -{' '}
                 {COMMANDS_DESCRIPTION[command]}
                 list

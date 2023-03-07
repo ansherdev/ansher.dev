@@ -33,15 +33,18 @@ export const Terminal = () => {
     setValid(false);
   }, []);
 
-  const execute = useCallback(
-    (event: KeyboardEvent<HTMLInputElement>) => {
-      if (event.code === 'Enter' && COMMAND_NAMES.includes(command.trim())) {
-        setMessage(command.trim() as Command);
-        setCommand('');
-      }
-    },
-    [command]
-  );
+  const execute = useCallback((command: string) => {
+    if (COMMAND_NAMES.includes(command.trim())) {
+      setMessage(command.trim() as Command);
+      setCommand('');
+    }
+  }, []);
+
+  const onEnterCommand = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.code === 'Enter') {
+      execute(command);
+    }
+  };
 
   useEffect(() => {
     if (inputRef.current) {
@@ -50,7 +53,7 @@ export const Terminal = () => {
   }, []);
 
   return (
-    <div className="flex  h-[30rem] w-[48rem] animate-shadow-pulse flex-col rounded-[2rem] bg-gradient-to-br from-ar-oxford-blue to-ar-xiketic font-jet-brains">
+    <div className="relative flex h-[60vh] w-full animate-shadow-pulse flex-col rounded-[2rem] bg-gradient-to-br from-ar-oxford-blue to-ar-xiketic font-jet-brains md:h-[30rem] md:w-[48rem]">
       <div className="flex h-fit w-full gap-2 border-b-white p-4">
         <div className="h-3 w-3 rounded-full bg-osx-red"></div>
         <div className="h-3 w-3 rounded-full bg-osx-yellow"></div>
@@ -60,7 +63,7 @@ export const Terminal = () => {
         <div className="animate-fade-in inline-block overflow-hidden">
           <Messages command={message} />
         </div>
-        <span className="flex gap-3 font-semibold leading-10">
+        <span className="hidden gap-3 font-semibold leading-10 md:flex ">
           <span>
             <span className="text-dracula-violet">root</span>
             <span className="text-dracula-blue">@ansher.dev</span>
@@ -75,12 +78,29 @@ export const Terminal = () => {
             }
             value={command}
             onChange={onChange}
-            onKeyDown={execute}
+            onKeyDown={onEnterCommand}
             placeholder="type 'help' to show the available commands"
           />
         </span>
       </div>
-      <div className="h-5 "></div>
+      {/* <div className="absolute left-0 bottom-0 flex h-1/6 w-full items-center justify-center gap-x-5 md:hidden">
+        {COMMAND_NAMES.map((command) =>
+          command !== 'help' ? (
+            <button
+              key={command}
+              onClick={() => execute(command)}
+              className={
+                (message === command
+                  ? 'border-dracula-blue text-dracula-blue'
+                  : 'text-dracula-beige') +
+                ' box-border rounded-sm border-2 bg-ar-purple-navy px-5 py-2 transition-all'
+              }
+            >
+              {command}
+            </button>
+          ) : null
+        )}
+      </div> */}
     </div>
   );
 };

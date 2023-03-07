@@ -3,21 +3,21 @@ import Image from 'next/image';
 
 export const WelcomeSection = () => {
   return (
-    <section className="relative z-0 flex h-screen flex-col justify-center">
-      {/* <h1 className="section-heading absolute top-10 left-1/2 flex -translate-x-1/2 items-center justify-center gap-3 text-7xl font-extrabold">
+    <section className="relative z-0 flex h-screen flex-col items-center justify-center gap-10">
+      <h1 className="section-heading flex items-center justify-center gap-3 text-5xl font-extrabold sm:text-6xl">
         Welcome
-        <span className="relative block h-24 w-24 animate-hand-shake">
+        <span className="relative block h-16 w-16  animate-hand-shake sm:h-20 sm:w-20">
           <Image src="hand.svg" fill alt="hand" />
         </span>
-      </h1> */}
-      <div className="flex items-center justify-center">
-        {/* <Image
-          className="image-rendering-pixelated animate-fly"
+      </h1>
+      <div className="relative flex w-fit items-center justify-center xl:w-full">
+        <Image
+          className="image-rendering-pixelated absolute -bottom-16 -left-24 z-10 h-64 w-64 animate-fly xl:relative xl:bottom-auto xl:left-auto xl:h-[512px] xl:w-[512px]"
           src="/jet-board.gif"
           alt="jet-board"
           width={512}
           height={512}
-        /> */}
+        />
         <Terminal />
       </div>
     </section>

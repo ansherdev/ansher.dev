@@ -8,7 +8,6 @@ export default function Home() {
       <Head>
         <title>ansher.dev</title>
       </Head>
-
       {/* <SpaceScene /> */}
       <WelcomeSection />
       <SkillsSection />
