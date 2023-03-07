@@ -13,6 +13,7 @@ module.exports = {
         'dracula-blue': '#8be9fd',
         'dracula-green': '#50fa7b',
         'dracula-beige': '#f8f8f2',
+        'dracula-orange': '#ffb86c',
         'dracula-red': '#ff5555',
         'osx-red': '#ff5c5c',
         'osx-yellow': '#ffbd4c',

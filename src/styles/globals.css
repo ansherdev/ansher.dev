@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .image-rendering-pixelated {
-    image-rendering: pixelated;
-  }
-
+@layer components {
   .section-heading {
     background: linear-gradient(180deg, #a69cac, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0rem 0rem 1.75rem rgba(255, 255, 255, 0.25);
+  }
+}
+
+@layer utilities {
+  .image-rendering-pixelated {
+    image-rendering: pixelated;
   }
 }
 

@@ -1,3 +1,4 @@
+import { Messages } from 'components/welcome-section/terminal/messages/messages';
 import {
   ChangeEvent,
   KeyboardEvent,
@@ -6,61 +7,40 @@ import {
   useRef,
   useState,
 } from 'react';
-import { messages } from 'shared/messages';
-import { Commands } from 'types/commands';
+import { COMMAND_NAMES } from 'shared/commands';
+import { Command } from 'types/command';
 
 const MAX_COMMAND_LENGTH = 50;
 
 export const Terminal = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const [disabled, setDisabled] = useState<boolean>(false);
   const [valid, setValid] = useState<boolean>(false);
-  const [message, setMessage] = useState<string>(messages.welcome);
+  const [message, setMessage] = useState<Command>('welcome');
   const [command, setCommand] = useState<string>('');
 
-  const onChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (event.target.value.length > MAX_COMMAND_LENGTH || disabled) {
-        return;
-      }
-
-      setCommand(event.target.value);
-
-      if (event.target.value.trim() in messages) {
-        return setValid(true);
-      }
-
-      setValid(false);
-    },
-    [disabled]
-  );
-
-  const animateText = useCallback((text: string, i: number = 1, delay = 5) => {
-    if (i === text.length + 1) {
-      setDisabled(false);
+  const onChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length > MAX_COMMAND_LENGTH) {
       return;
     }
 
-    setTimeout(() => {
-      setMessage(text.substring(0, i));
-      animateText(text, i + 1);
-    }, delay);
+    setCommand(event.target.value);
+
+    if (COMMAND_NAMES.includes(event.target.value.trim())) {
+      return setValid(true);
+    }
+
+    setValid(false);
   }, []);
 
   const execute = useCallback(
     (event: KeyboardEvent<HTMLInputElement>) => {
-      if (disabled) {
-        return;
-      }
-
-      if (event.code === 'Enter' && command.trim() in messages) {
-        setDisabled(true);
+      if (event.code === 'Enter' && COMMAND_NAMES.includes(command.trim())) {
+        setMessage(command.trim() as Command);
         setCommand('');
-        animateText(messages[command.trim() as Commands], 1);
       }
     },
-    [animateText, command, disabled]
+    [command]
   );
 
   useEffect(() => {
@@ -77,7 +57,9 @@ export const Terminal = () => {
         <div className="h-3 w-3 rounded-full bg-osx-green"></div>
       </div>
       <div className="font-mediums flex-grow p-4 text-dracula-beige">
-        <span className="inline-block">{message}</span>
+        <div className="animate-fade-in inline-block overflow-hidden">
+          <Messages command={message} />
+        </div>
         <span className="flex gap-3 font-semibold leading-10">
           <span>
             <span className="text-dracula-violet">root</span>
