@@ -12,7 +12,7 @@ export const WelcomeSection = () => {
       </h1>
       <div className="relative flex w-fit items-center justify-center xl:w-full">
         <Image
-          className="image-rendering-pixelated absolute -bottom-14 -left-12 z-10 h-40 w-40 animate-fly xl:relative xl:bottom-auto xl:left-auto xl:h-[512px] xl:w-[512px]"
+          className="image-rendering-pixelated absolute -bottom-14 -left-12 z-10 h-40 w-40 animate-fly sm:-bottom-16 sm:-left-24 sm:h-64 sm:w-64 xl:relative xl:bottom-auto xl:left-auto xl:h-[512px] xl:w-[512px]"
           src="/jet-board.gif"
           alt="jet-board"
           width={512}

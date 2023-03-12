@@ -49,8 +49,8 @@ module.exports = {
         fly: 'fly 3s ease infinite',
       },
       fontFamily: {
-        inter: ['var(--font-inter)', ...fontFamily.sans],
-        'jet-brains': ['var(--font-jet-brains)', ...fontFamily.sans],
+        inter: ['Inter', ...fontFamily.sans],
+        'jet-brains': ['JetBrainsMono', ...fontFamily.sans],
       },
       backgroundImage: {
         'stars-pattern': "url('/stars.png')",
