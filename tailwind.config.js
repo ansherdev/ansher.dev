@@ -35,11 +35,20 @@ module.exports = {
         },
         fly: {
           '0, 100%': {
-            transform: 'translate(0rem, 0rem)',
+            transform: 'translate(0rem, 0rem) scale(1)',
           },
 
           '50%': {
-            transform: 'translate(0, 1.5rem)',
+            transform: 'translate(0, 1.5rem) scale(1)',
+          },
+        },
+        'fly-mirror': {
+          '0, 100%': {
+            transform: 'translate(0rem, 0rem) scaleX(-1)',
+          },
+
+          '50%': {
+            transform: 'translate(0, 1.5rem) scaleX(-1)',
           },
         },
       },
@@ -47,6 +56,7 @@ module.exports = {
         'hand-shake': 'hand-shake 3s ease-in-out infinite',
         'shadow-pulse': 'shadow-pulse 2s ease infinite',
         fly: 'fly 3s ease infinite',
+        'fly-mirror': 'fly-mirror 3s ease infinite',
       },
       fontFamily: {
         inter: ['Inter', ...fontFamily.sans],
@@ -54,7 +64,9 @@ module.exports = {
       },
       backgroundImage: {
         'stars-pattern': "url('/stars.png')",
-        'under-construction-pattern': "url('/under-construction-tape.jpg')",
+      },
+      scale: {
+        '-100': '-1',
       },
     },
   },
