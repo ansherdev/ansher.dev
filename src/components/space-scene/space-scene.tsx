@@ -7,7 +7,7 @@ export const SpaceScene = () => {
   return (
     <div
       id="space-scene-container"
-      className="absolute top-0 left-0 h-screen w-screen"
+      className="absolute top-0 left-0 h-screen w-full"
     >
       <Canvas
         camera={{
@@ -24,6 +24,7 @@ export const SpaceScene = () => {
         <Moon />
         <Earth />
       </Canvas>
+      <div className="stars-pattern-masking absolute top-0 left-0 h-full w-full bg-stars-pattern"></div>
     </div>
   );
 };

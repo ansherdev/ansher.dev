@@ -52,6 +52,10 @@ module.exports = {
         inter: ['var(--font-inter)', ...fontFamily.sans],
         'jet-brains': ['var(--font-jet-brains)', ...fontFamily.sans],
       },
+      backgroundImage: {
+        'stars-pattern': "url('/stars.png')",
+        'under-construction-pattern': "url('/under-construction-tape.jpg')",
+      },
     },
   },
   plugins: [],

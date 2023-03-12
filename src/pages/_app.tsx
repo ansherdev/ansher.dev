@@ -1,6 +1,16 @@
+import { Inter, JetBrains_Mono } from '@next/font/google';
 import type { AppProps } from 'next/app';
-import { inter, jetBrainsMono } from 'shared/fonts';
 import 'styles/globals.css';
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-inter',
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-jet-brains',
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

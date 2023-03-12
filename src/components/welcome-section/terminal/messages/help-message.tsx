@@ -12,11 +12,15 @@ export const HelpMessage = () => {
               <li key={command}>
                 <span className="text-dracula-blue">{command}</span> -{' '}
                 {COMMANDS_DESCRIPTION[command]}
-                list
               </li>
             );
           }
         )}
+        <li>
+          <span className="text-dracula-red">
+            More commands are coming soon
+          </span>
+        </li>
       </ul>
     </>
   );

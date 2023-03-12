@@ -83,24 +83,6 @@ export const Terminal = () => {
           />
         </span>
       </div>
-      {/* <div className="absolute left-0 bottom-0 flex h-1/6 w-full items-center justify-center gap-x-5 md:hidden">
-        {COMMAND_NAMES.map((command) =>
-          command !== 'help' ? (
-            <button
-              key={command}
-              onClick={() => execute(command)}
-              className={
-                (message === command
-                  ? 'border-dracula-blue text-dracula-blue'
-                  : 'text-dracula-beige') +
-                ' box-border rounded-sm border-2 bg-ar-purple-navy px-5 py-2 transition-all'
-              }
-            >
-              {command}
-            </button>
-          ) : null
-        )}
-      </div> */}
     </div>
   );
 };
